@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="png" href="https://lh5.ggpht.com/pSQ4jO3VEOJPZ7wClhOchkyEPfnqptK-00bwGJEkEIrWO8StnxTx8webxjRcSCOENQ=w300">
+  <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.14/highcharts.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers/charts.js"></script>
+  <script type="text/javascript" src="js/controllers/map.js"></script>
+  <script defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAd615MbBmB3MzWbj4UPP7mnaBuy00Wmas"></script>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left">
+          <li style="margin-left:10px"><img src="https://lh5.ggpht.com/pSQ4jO3VEOJPZ7wClhOchkyEPfnqptK-00bwGJEkEIrWO8StnxTx8webxjRcSCOENQ=w300" id="logo"></li>
+          <li><a href="#!/charts">Charts</a></li>
+          <li><a href="#!/map">Maps</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div ng-view></div>
+</body>
+</html>

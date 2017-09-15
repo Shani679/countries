@@ -1,0 +1,26 @@
+<div ng-controller="Map">
+	<div class="container">
+		<div class="row">
+			<h6>Click on a country from the list to see its map</h6>
+			<div class="col s12 search input-field"><input type="text" id="serach" ng-model="value" ng-keyup="search(value)"><label for="search">Search</label></div>
+			 <div class="col s12 m5 tbl">
+			 	<table>
+			 		<thead>
+			 			<!-- <tr> -->
+			 				<td ng-repeat="field in fields">{{field}}</td>
+			 			<!-- </tr> -->
+			 		</thead>
+			 		<tbody>
+			 			<tr ng-repeat="row in dataToShow" ng-click="showOnMap(row)" class="country">
+			 				<td>{{row.name}}</td>
+			 				<!-- <td>{{row.capital}}</td> -->
+			 				<td><img src={{row.flag}} height="100px"></td>
+			 			</tr>
+			 		</tbody>
+			 	</table>
+			 </div>
+			 <div class="col s0 m1"></div>
+			 <div class="col s12 m6 map" id="map">Country map</div>
+		</div>
+	</div>
+</div>
