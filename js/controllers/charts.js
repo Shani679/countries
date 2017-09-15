@@ -1,9 +1,8 @@
 app.controller('Charts', ($scope,$http)=>{
 	$scope.range=0;
     $scope.range2=0;
-	$http.get('http://restcountries.eu/rest/v2/all?fields=name;population;area').then(function(data){
+	$http.get('/countries/countries.json').then(function(data){
         $scope.dataToShow=data.data;
-        console.log(data.data)
 	})
 	$scope.updatePopValue=(value)=>{
 		$scope.range=value;
@@ -48,15 +47,11 @@ function fetchPie(arr, range, field, container){
 }
 
 function createObjectsArr(arr, range, field){
-    console.log(range)
 	var result=[];
 	for (var i = 0; i < arr.length; i++) {
 		if(arr[i][field]<=range){
 			result.push({name: arr[i].name, y: arr[i][field]})
 		}
-        if(arr[i][field]==range){
-            console.log(arr[i])
-        }	
 	}
 	return result;
 }

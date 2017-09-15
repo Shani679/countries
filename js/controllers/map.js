@@ -1,7 +1,7 @@
 app.controller('Map', ($scope,$http)=>{
 	$scope.fields=['Name', 'Flag'];
     $scope.dataToShow;
-	$http.get('http://restcountries.eu/rest/v2/all?fields=name;flag').then(response=>{
+	$http.get('/countries/countries.json').then(response=>{
 		$scope.table=response.data;
         $scope.dataToShow=response.data;
 	})
@@ -13,8 +13,7 @@ app.controller('Map', ($scope,$http)=>{
         }     
     }
 	$scope.showOnMap=(row)=>{
-		console.log(row.name)
-		$http.get('http://restcountries.eu/rest/v2/all?fields=name;latlng').then(response=>{
+		$http.get('/countries/countries.json').then(response=>{
 			for (var i = 0; i < response.data.length; i++) {
 				if(response.data[i].name===row.name){
 					var lat=response.data[i].latlng[0];
